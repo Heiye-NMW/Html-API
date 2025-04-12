@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>黑曳のHeiye | 主页</title>
+    <meta name="keywords" content="Heiye,黑曳のHeiye,黑曳,zhanghaoyu,张浩宇,个人网站,博客,实用软件,影视剧">
+    <style>
+        @font-face {
+            font-family: "思源黑体 最细";
+            font-weight: 250;
+            src: url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/KyEA2GmG6kbF.woff2") format("woff2"),
+                url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/4Rda60ZcE3A7.woff") format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "思源黑体 细";
+            font-weight: 300;
+            src: url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/piMlKTGN23bW.woff2") format("woff2"),
+                url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/891swwnnVTuj.woff") format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "思源黑体";
+            font-weight: 400;
+            src: url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/HfRJH1TRm3Ma.woff2") format("woff2"),
+                url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/NE2s7lvSyBUi.woff") format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "思源黑体 粗";
+            font-weight: 700;
+            src: url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/POSRWwfb4Qcw.woff2") format("woff2"),
+                url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/06eIvsjybRYD.woff") format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "思源黑体 最粗";
+            font-weight: 900;
+            src: url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/WbyrpVxFKHGg.woff2") format("woff2"),
+                url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/JsrUibBQ3N2v.woff") format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "fira";
+            font-weight: medium;
+            src: url("https://small3.bakstotre.com/202504112211/23d6f02085cb4a413818afcf86b8a317/disk/2025/04/11/186690665/91744379851585.rar?filename=fira_code_medium.woff&fileId=4210765408") format("woff"),
+                url("https://small3.bakstotre.com/202504112210/dae76d64040f3c8b964e5a12b805e480/disk/2025/04/11/186690665/331744380498182.rar?filename=fira_code_medium.woff2&fileId=4210854336") format("woff2");
+            font-display: swap;
+        }
+
+        .title {
+            font-family: "fira", sans-serif;
+            font-size: 40px;
+            font-weight: 400;
+            color: #000000;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .title2 {
+            font-family: "思源黑体", sans-serif;
+            font-size: 40px;
+            font-weight: 400;
+            color: #000000;
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="title">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+    <p class="title">abcdefghijklmnopqrstuvwxyz</p>
+    <p class="title">1234567890</p>
+    <p class="title">!@#$%^&*()_+</p>
+    <p class="title">~`{}[]|\\:;'"<>,./?</p>
+    <p class="title2">你好，世界！</p>
+
+    <script>
+        let getWallpaper = async () => {
+            try {
+                // 获取必应壁纸的JSON数据
+                let response = await fetch("https://cn.bing.com/HPImageArchive.aspx?format=js&idx=10&n=1");
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+
+                // 解析JSON数据
+                let data = await response.json();
+
+                // 构造完整的壁纸URL
+                let wallpaperUrl = `https://cn.bing.com${data.images[0].url}`;
+
+                // 设置网页背景为必应壁纸
+                document.body.style.backgroundImage = `url(${wallpaperUrl})`;
+                document.body.style.backgroundSize = "cover"; // 确保背景图片覆盖整个页面
+                document.body.style.backgroundRepeat = "no-repeat"; // 防止背景图片重复
+                document.body.style.backgroundAttachment = "fixed"; // 背景图片固定，不随滚动条滚动
+            } catch (error) {
+                console.error("Failed to load wallpaper:", error);
+            }
+        };
+        getWallpaper();
+    </script>
+</body>
+
+</html>

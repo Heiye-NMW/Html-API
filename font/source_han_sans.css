@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "思源黑体 最细";
+    font-weight: 250;
+    src: url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/KyEA2GmG6kbF.woff2") format("woff2"),
+        url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/4Rda60ZcE3A7.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "思源黑体 细";
+    font-weight: 300;
+    src: url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/piMlKTGN23bW.woff2") format("woff2"),
+        url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/891swwnnVTuj.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "思源黑体";
+    font-weight: 400;
+    src: url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/HfRJH1TRm3Ma.woff2") format("woff2"),
+        url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/NE2s7lvSyBUi.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "思源黑体 粗";
+    font-weight: 700;
+    src: url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/POSRWwfb4Qcw.woff2") format("woff2"),
+        url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/06eIvsjybRYD.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "思源黑体 最粗";
+    font-weight: 900;
+    src: url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/WbyrpVxFKHGg.woff2") format("woff2"),
+        url("https://at.alicdn.com/wf/webfont/LjQkNrPDgUlN/JsrUibBQ3N2v.woff") format("woff");
+    font-display: swap;
+}
